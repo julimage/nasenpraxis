@@ -1,0 +1,219 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Typography
+@sansFontFamily:        "Open Sans", sans-serif;
+@boldFontFamily:		"open Sans 300", sans-serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:			16px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        13px;
+
+// Headlines
+@headingsFontFamilyReg:		'Open Sans', sans-serif;
+@fontColor:					@grey;
+
+// Accent colors
+// -------------------------
+@white:					#fff;
+@red:					#7F153C;
+@grey:					#6C6C71;
+
+
+// button colors
+// -------------------------
+
+@btn-primary-color:              @white;
+@btn-primary-bg:                 @red;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+
+
+/* BASIC STUFF
+*********************************************/
+
+html, body {
+  height:100%;
+}
+
+html {
+	/* scrollbar fix (prevent ugly left pull for lower content sites) */
+	overflow-y: scroll;
+}
+
+body {
+	font-family: @sansFontFamily;
+	color: @fontColor;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight * 2;
+}
+
+ul, ol {
+	margin-top: 0;	
+}
+
+
+
+/* TYPOGRAPHIE
+*********************************************/
+
+// h1, h2, h3, h4, h5, h6 {
+//   margin: @baseLineHeight*2 0;
+// }
+
+h1 {
+	margin: 0 0 @baseLineHeight*2 0;
+	text-transform: uppercase;
+	color: @red;
+	font-size: @baseFontSize * 2.25;
+	line-height: @baseLineHeight * 4;
+}
+
+h2 {
+	font-weight: 300;
+	color: @red;
+	font-size: @baseFontSize*1.75;
+	margin-bottom: @baseLineHeight*4;
+}
+
+h3 {
+	font-size: @baseFontSize*1.25;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: @baseLineHeight;
+
+}
+
+h4 {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	font-weight: 300;
+	line-height: @baseLineHeight * 2;
+}
+
+p {
+	margin: @baseLineHeight 0;
+
+}
+
+ins {
+	.text-uppercase;
+	text-decoration: none;
+	font-size: 75%;
+}
+
+
+/* CONTENT
+*********************************************/
+
+
+#stripe-grey {
+	width: 100%;
+	height: 0.5%;
+	margin-top: 5%;
+	background-color: @grey;
+}
+
+#start {
+	width: 100%;
+	background-color: @red;
+}
+
+#stripe-grey-btm {
+	width: 100%;
+	height: 0.5%;
+	background-color: @grey;
+}
+
+.logo {
+	background-color: @white;
+	padding: 5%;
+}
+
+#content {
+	margin: 2.5%;
+}
+
+.dist-top {
+	margin-top: @baseLineHeight*1.5;
+}
+
+
+.contact {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: @baseLineHeight;
+}
+
+
+.btn {
+	font-weight: 300;
+}
+
+// Links
+
+a {
+  color: @red;
+  text-decoration: none;
+  border-bottom: 1px dotted @red;
+
+  &:hover, &:focus, &:active {
+    color: @white;
+    text-decoration: none;
+    background-color: @red;
+    border-bottom: 1px dotted @white;
+    outline: none;
+  }
+}
+
+
+/* IMPRINT
+*********************************************/
+
+#imprint {
+	display: block;
+}
+
+.toggler-right-up {
+	&:after {
+		content:"\f0d8";
+	}
+}
+
+.toggler-right-down {
+	&:after {
+		content:"\f0d7";
+	}
+}
+
+.toggler-right-up, .toggler-right-down {
+	border: none;
+	padding-left: 0;
+
+	&:after {
+		font-family: 'FontAwesome';
+		font-size: @baseLineHeight;
+		color: @white;
+		padding-left: @baseLineHeight*0.5;
+		vertical-align: middle;
+		line-height: @baseLineHeight;
+	}
+}
+
+a.toggler-right-down, a.toggler-right-up {
+	color: @white;
+	border-bottom: 1px dotted @white;
+
+	&:hover, &:focus, &:active {
+	color: @red;
+	background-color: @white;
+	text-decoration: none;
+	border-bottom: 1px dotted @red;
+	cursor: help;
+
+		&:after {
+			color: @red;
+		}
+	}
+}
